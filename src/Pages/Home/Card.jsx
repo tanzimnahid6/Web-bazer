@@ -62,7 +62,7 @@ const Card = ({ job }) => {
           </span>
         </div>
         <Link to={`/jobs/${_id}`}>
-          <div className="btn btn-outline btn-warning  w-full">BIT NOW</div>
+          <div className="btn btn-outline btn-warning  w-full">BID NOW</div>
         </Link>
       </div>
     </>
