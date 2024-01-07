@@ -51,7 +51,7 @@ const MyPostedJobs = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://server-psi-navy.vercel.app/addJobs/${_id}`, {
+        fetch(`https://b8a11-server-side-sumaiyakhan322.vercel.app/addJobs/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

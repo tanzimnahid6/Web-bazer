@@ -15,7 +15,7 @@ const MyBids = () => {
   
   useEffect(()=>{
     const getData= async()=>{
-     const res=await fetch("https://server-psi-navy.vercel.app/usersBids")
+     const res=await fetch("https://b8a11-server-side-sumaiyakhan322.vercel.app/usersBids")
      const result=await res.json();
      setData(result)
     }
