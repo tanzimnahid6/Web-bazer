@@ -65,13 +65,13 @@ const AddJobsForm = () => {
       <div>
         <form onSubmit={handleAdd}>
           {/* email and job title */}
-          <div className="flex flex-col md:flex-row justify-between gap-6  my-10">
-            <div className=" h-12 w-1/2 flex items-center justify-between">
+          <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-6  my-10">
+            <div className=" h-12 w-full md:w-1/2 flex items-center justify-between">
               <label htmlFor="email" className="text-[#194a63] font-bold w-3/12">
                 Email:
               </label>
               <input
-                className="border border-[#c3bd2e] input input-bordered w-9/12"
+                className="border border-[#c3bd2e] input input-bordered w-9/12 font-semibold"
                 type="email"
                 name="email"
                 readOnly
@@ -79,13 +79,13 @@ const AddJobsForm = () => {
                 id="email"
               />
             </div>
-            <div className="relative h-12  w-1/2 flex items-center justify-between">
+            <div className="relative h-12 w-full  md:w-1/2 flex items-center justify-between">
               <label htmlFor="title" className="text-[#194a63] font-bold w-3/12">
                 Title:
               </label>
               <input
-                className="border border-[#c3bd2e] input input-bordered w-9/12"
-                placeholder="Job-title "
+                className="border border-[#c3bd2e] input input-bordered w-9/12 font-semibold"
+                placeholder="Title "
                 type="text"
                 name="jobTile"
                 required
@@ -95,12 +95,12 @@ const AddJobsForm = () => {
           </div>
           {/* Img and type */}
           <div className="flex flex-col md:flex-row gap-6 justify-between my-10">
-            <div className="relative h-12 w-full flex items-center justify-between">
+            <div className="relative h-12 w-full flex items-center gap-2 md:gap-0 justify-between">
               <label htmlFor="deadline" className="text-[#194a63] font-bold w-3/12">
                 Deadline:
               </label>
               <input
-                className="border border-[#c3bd2e] input input-bordered w-9/12"
+                className="border border-[#c3bd2e] input input-bordered w-9/12 font-semibold"
                 placeholder="Deadline "
                 type="date"
                 name="deadline"
@@ -108,12 +108,12 @@ const AddJobsForm = () => {
                 id="deadline"
               />
             </div>
-            <div className="relative h-12 w-full flex items-center justify-between">
+            <div className="relative h-12 w-full flex items-center gap-2 md:gap-0 justify-between">
               <label htmlFor="category" className="text-[#194a63] font-bold w-3/12">
                 Category:
               </label>
               <select
-                className="select select-bordered border-[#c3bd2e] input  w-9/12"
+                className="select select-bordered border-[#c3bd2e] input  w-9/12 font-semibold"
                 id="category"
                 name="category"
               >
@@ -125,28 +125,28 @@ const AddJobsForm = () => {
           </div>
           {/* minimum and maximum */}
           <div className="flex flex-col md:flex-row justify-between gap-6 my-10">
-            <div className="relative h-12 w-1/2 flex items-center justify-between">
+            <div className="relative h-12 w-full md:w-1/2 gap-2  flex items-center justify-between">
               <label htmlFor="min" className="text-[#194a63] font-bold w-3/12">
-                Minimum($):
+                Min($):
               </label>
 
               <input
-                className="border border-[#c3bd2e] input input-bordered w-9/12"
-                placeholder="Minimum-Price"
+                className="border border-[#c3bd2e] input input-bordered w-9/12 font-semibold"
+                placeholder="Minimum-salary"
                 type="number"
                 name="minimum"
                 required
                 id="min"
               />
             </div>
-            <div className="relative h-12 w-1/2 flex items-center justify-between gap-2">
+            <div className="relative h-12 w-full md:w-1/2 flex items-center justify-between gap-2">
               <label htmlFor="max" className="text-[#194a63] font-bold w-3/12">
-                Maximum($):
+                Max($):
               </label>
 
               <input
-                className="border border-[#c3bd2e] input input-bordered w-9/12"
-                placeholder="Maximum-Price"
+                className="border border-[#c3bd2e] input input-bordered w-9/12 font-semibold"
+                placeholder="Maximum-salary"
                 type="number"
                 name="maximum"
                 required
@@ -154,13 +154,13 @@ const AddJobsForm = () => {
               />
             </div>
           </div>
-          <div className="relative h-12 w-full flex items-center gap-12 justify-center">
-            <label htmlFor="Img" className="text-[#194a63] font-bold w-1/12">
+          <div className="h-12 w-full flex items-center gap-12 justify-center">
+            <label htmlFor="Img" className="text-[#194a63] font-bold w-1/12 ">
               Image:
             </label>
 
             <input
-              className="border border-[#c3bd2e] input input-bordered w-11/12"
+              className="border border-[#c3bd2e] input input-bordered w-11/12 font-semibold"
               placeholder="Image"
               type="url"
               name="img"
@@ -169,12 +169,12 @@ const AddJobsForm = () => {
             />
           </div>
 
-          <div className="relative h-32 w-full  flex items-center justify-center gap-12">
+          <div className="relative h-32 w-full mt-8 md:mt-2  md:flex items-center justify-center gap-12">
             <label htmlFor="des" className="text-[#194a63] font-bold w-1/12">
               Description:
             </label>
             <textarea
-              className="textarea border border-[#c3bd2e] w-11/12"
+              className="textarea border border-[#c3bd2e] w-11/12 font-semibold"
               placeholder="Description"
               name="des"
               id="des"
