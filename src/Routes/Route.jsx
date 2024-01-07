@@ -42,12 +42,12 @@ const router = createBrowserRouter([
       },{
         path:'/jobs/:id',
         element:<Private><JobDetails></JobDetails></Private>,
-        loader:({params})=>fetch(`https://server-psi-navy.vercel.app/addJobs/${params.id}`)
+        loader:({params})=>fetch(`https://b8a11-server-side-sumaiyakhan322.vercel.app/addJobs/${params.id}`)
       },{
        
         path:'/update/:id',
         element:<UpdateJobs></UpdateJobs>,
-        loader:({params})=>fetch(`https://server-psi-navy.vercel.app/addJobs/${params.id}`)
+        loader:({params})=>fetch(`https://b8a11-server-side-sumaiyakhan322.vercel.app/addJobs/${params.id}`)
       }
     
     ]

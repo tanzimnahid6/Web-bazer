@@ -17,7 +17,7 @@ const TabJobs = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ["jobs"],
     queryFn: async () => {
-      return await fetch("https://server-psi-navy.vercel.app/addJobs").then(
+      return await fetch("https://b8a11-server-side-sumaiyakhan322.vercel.app/addJobs").then(
         (res) => res.json()
       );
     },
