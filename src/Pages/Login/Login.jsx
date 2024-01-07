@@ -97,8 +97,8 @@ const Login = () => {
               </div>
               <div>
               <div className="flex items-center gap-2 cursor-pointer hover:text-black ">
-                <span>Password:1234556A</span>
-                <CopyToClipboard text="1234556A">
+                <span>Password:123456A</span>
+                <CopyToClipboard text="123456A">
                   <span
                     className="btn btn-xs btn-outline"
                     onClick={() => setIsCopiedPassword(true)}
@@ -169,8 +169,8 @@ const Login = () => {
                       </button>
                     </span>
                   </a>
-                  <p className="text-black">
-                    Do not have any account ? Go to{" "}
+                  <p className="text-black font-semibold text-sm">
+                    Do not have any account ? Go to
                     <Link
                       className="text-[#c3bd2e] font-bold underline"
                       to="/register"

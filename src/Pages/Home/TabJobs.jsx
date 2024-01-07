@@ -11,6 +11,8 @@ const TabJobs = () => {
   const [web, setWeb] = useState([]);
   const [digital, setDigital] = useState([]);
   const [graphics, setGraphics] = useState([]);
+  const [showMore,setShowMore] = useState(false)
+  const [count,setCount] = useState(6)
 
   const { isPending, error, data } = useQuery({
     queryKey: ["jobs"],
@@ -40,6 +42,14 @@ const TabJobs = () => {
     );
     setGraphics(graphicsDesign);
   };
+  const handleShowMore = ()=>{
+    setCount(100)
+    setShowMore(!showMore)
+  }
+  const handleShowLess = ()=>{
+    setCount(6)
+    setShowMore(!showMore)
+  }
 
   return (
     <div className="text-center mt-12">
@@ -62,33 +72,35 @@ const TabJobs = () => {
         </TabList>
         <TabPanel>
           <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl md:grid-cols-3  mx-auto p-4 md:p-0 gap-10 mt-10">
-            {data.map((job) => (
+            {data.slice(0,count).map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl md:grid-cols-3  mx-auto p-4 md:p-0 gap-10 mt-10">
-            {web.map((job) => (
+            {web.slice(0,count).map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl md:grid-cols-3  mx-auto p-4 md:p-0 gap-10 mt-10">
-            {digital.map((job) => (
+            {digital.slice(0,count).map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
           <div className="grid grid-cols-1 sm:grid-cols-2 max-w-6xl md:grid-cols-3  mx-auto p-4 md:p-0 gap-10 mt-10">
-            {graphics.map((job) => (
+            {graphics.slice(0,count).map((job) => (
               <Card job={job} key={job._id}></Card>
             ))}
           </div>
         </TabPanel>
       </Tabs>
+
+      {showMore ? <div className="btn hover:btn-accent mt-8 font-bold btn-warning" onClick={handleShowLess}>Show Less</div>: <div className="btn  mt-8 font-bold hover:btn-accent btn-warning" onClick={handleShowMore}>Show More</div>}
     </div>
   );
 };
