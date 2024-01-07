@@ -16,12 +16,12 @@ const Card = ({ job }) => {
   } = job;
   return (
     <>
-      <div className="rounded overflow-hidden shadow-2xl flex flex-col ">
+      <div className="rounded overflow-hidden shadow-xl flex flex-col object-cover p-4 bg-brown-50">
         <a href="#" />
         <div className="relative">
           <a href="#">
             <img
-              className="w-full h-72 "
+              className="w-full h-60 object-cover "
               src={img}
               alt="Sunset in the mountains"
             />

@@ -7,10 +7,10 @@ import Team from "./Team";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-brown-50 ">
       <NavBar></NavBar>
       <Banner></Banner>
-      <div className="max-w-6xl mx-auto md:p-0 p-4 ">
+      <div className="max-w-6xl mx-auto md:p-0 p-4  ">
         <TabJobs></TabJobs>
         <Team></Team>
         <OurFeature></OurFeature>
