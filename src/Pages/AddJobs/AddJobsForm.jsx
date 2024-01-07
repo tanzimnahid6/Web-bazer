@@ -6,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
 const AddJobsForm = () => {
   const navigate = useNavigate();
-  const { user, count, setCount } = useContext(AuthContext);
+  const { user, setCount } = useContext(AuthContext);
   const userEmail = user?.email;
   const handleAdd = (e) => {
     e.preventDefault();

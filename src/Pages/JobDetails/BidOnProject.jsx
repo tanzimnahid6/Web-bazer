@@ -81,7 +81,7 @@ const BidOnProject = () => {
           </div>
           <div className="relative h-12 w-full my-10 ">
             <label htmlFor="job-title" className="text-[#194a63] font-bold ">
-              Job-title:
+              Title:
             </label>
             <input
               className="border border-[#c3bd2e] input input-bordered w-full  font-semibold"
@@ -96,7 +96,7 @@ const BidOnProject = () => {
           {/* Price */}
           <div className="relative h-12  w-full my-10 ">
             <label htmlFor="price" className="text-[#194a63] font-bold">
-              Price
+              Price:
             </label>
             <input
               className="border border-[rgb(195,189,46)] input input-bordered w-full  font-semibold"
@@ -127,7 +127,7 @@ const BidOnProject = () => {
           {/* User email */}
           <div className="relative h-12 w-full my-10">
             <label htmlFor="user-email" className="text-[#194a63] font-bold">
-              User-email
+              User Email
             </label>
             <input
               className=" input-bordered border-[#c3bd2e] input  w-full  font-semibold"
