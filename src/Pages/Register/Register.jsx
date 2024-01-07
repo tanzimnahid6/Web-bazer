@@ -68,7 +68,7 @@ const Register = () => {
             <h2 className="text-[#193e51] my-10 font-bold md:text-4xl text-2xl">
               Please Register here{" "}
             </h2>
-            <div className="card w-full  shadow-2xl bg-base-300 box">
+            <div className="card w-full font-semibold  shadow-2xl bg-base-300 box">
               <form className="space-y-4 p-10" onSubmit={handleRegister}>
                 {/* Name input */}
                 <input
@@ -76,6 +76,7 @@ const Register = () => {
                   placeholder="Your Name"
                   className="input input-bordered  md:w-3/4 w-11/12 text-black"
                   name="name"
+                  defaultValue={'John Doye'}
                   required
                 />
                 {/* Image */}
@@ -84,6 +85,7 @@ const Register = () => {
                   placeholder="Your Photo Url"
                   className="input input-bordered  md:w-3/4 w-11/12 text-black"
                   name="photo"
+                  defaultValue={'https://picsum.photos/200/300'}
                   required
                 />
 
